@@ -1,0 +1,24 @@
+.tiptap {
+  > * + * {
+    margin-top: 0.75em;
+  }
+
+  blockquote {
+    border-left: 3px solid #0d0d0d57;
+    padding-left: 1rem;
+  }
+
+  pre {
+    background: #0d0d0d;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: "JetBrainsMono", monospace;
+    padding: 0.75rem 1rem;
+
+    code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+  }
+}
