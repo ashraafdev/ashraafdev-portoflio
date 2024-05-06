@@ -104,7 +104,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/contactme" element={<ContactMe />} />
+              <Route path="/contact" element={<ContactMe />} />
               <Route path="/about" element={<AboutMe />} />
               <Route path="/blog/:blogSlug" element={<BlogData />} />
               <Route exact path="/blog" element={<Blog />} />
