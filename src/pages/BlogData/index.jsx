@@ -41,7 +41,7 @@ export default function BlogData() {
           <PublishedBy /> {blog.author ? blog.author : null}
         </div>
       </div>
-      <div className="text-left mx-[20%] font-semibold text-[20px] lg:text-[25px] xl:text-[30px] font-serif">
+      <div className="text-left mx-[20px] md:mx-[7.5%] lg:mx-[20%] font-semibold text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px] font-serif">
         <Editor blogContent={blog.blog} />
       </div>
     </div>

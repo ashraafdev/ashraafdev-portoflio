@@ -39,7 +39,7 @@ export default function Home() {
   }, [error]);
 
   return (
-    <div className="h-full w-full flex flex-col gap-10 px-[50px] py-[20px] text-[30px]">
+    <div className="h-full w-full flex flex-col gap-10 px-[25px] lg:px-[50px] py-[20px] text-[30px]">
       <Navbar />
       <Header />
       <div className="flex w-full">
