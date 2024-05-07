@@ -25,7 +25,7 @@ export default function Project({
         )}
       </div>
       <div className="h-[70%] text-[20px] lg:text-[25px] xl:text-[30px]">{projectDescription}</div>
-      <div className="h-auto text-[15.5px] lg:text-[17.5px] xl:text-[20px] ">
+      <div className="h-auto text-[15.5px] lg:text-[17.5px] xl:text-[20px]">
         <span className="font-bold">Used Tech: </span>
         {usedTech.join(", ")}
       </div>

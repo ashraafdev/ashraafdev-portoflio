@@ -4,8 +4,6 @@ import { useSingleBlog } from "../../hooks/blog";
 import { useParams } from "react-router-dom";
 import Navbar from "../../components/Home/navbar";
 import { PublishedAt, PublishedBy } from "../../components/Blog/blogimages";
-import { EditorContent, useEditor } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
 import Editor from "../../components/Blog/editor";
 
 export default function BlogData() {
