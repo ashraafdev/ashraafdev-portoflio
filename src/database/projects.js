@@ -1,4 +1,4 @@
-import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query, where } from "firebase/firestore";
 
 export async function getLatestProjects(db) {
   // prepare collection
@@ -15,4 +15,22 @@ export async function getLatestProjects(db) {
 
   // return projects
   return querySnapshot.docs; 
+}
+
+
+export async function getProjectData(db, slug) {
+  // prepare collection
+  let projectsCollection = collection(db, "projects");
+
+  //prepare
+  const queryProjectData = query(
+    projectsCollection,
+    where('slug', '==', slug),
+    limit(1)
+  );
+
+  // retreive data
+  const querySnapshot = await getDocs(queryProjectData);
+
+  return querySnapshot.docs[0].data();
 }

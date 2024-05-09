@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { createContext, useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 import toast, { Toaster } from "react-hot-toast";
 import "./App.css";
 import Projects from "./pages/Projects";
@@ -13,6 +14,7 @@ import Blog from "./pages/Blog";
 import BlogData from "./pages/BlogData";
 import SplashScreen from "./components/Common/splashscreen";
 import DarkMode from "./components/Common/darkmode";
+import Project from "./pages/Project";
 
 const AppContext = createContext(null);
 
@@ -32,6 +34,7 @@ function App() {
 
   // Initialize Database
   const db = getFirestore(app);
+  const storage = getStorage(app);
 
   const [allprojects, setProjects] = useState(0);
   const [lastThreeProjects, setLastThreeProjects] = useState([]);
@@ -76,6 +79,7 @@ function App() {
         <AppContext.Provider
           value={{
             database: db,
+            storage: storage,
             projects: allprojects,
 
             lastThreeProjects: lastThreeProjects,
@@ -104,6 +108,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/project/:slug" exact element={<Project />} />
               <Route path="/contact" element={<ContactMe />} />
               <Route path="/about" element={<AboutMe />} />
               <Route path="/blog/:blogSlug" element={<BlogData />} />

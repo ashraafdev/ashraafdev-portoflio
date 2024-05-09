@@ -15,7 +15,7 @@ export default function Projects({ projects }) {
             <Project
               k={key}
               className={coloredProjectClassName}
-              projectLink={project.link}
+              projectSlug={project.slug}
               projectName={project.name}
               projectDescription={project.description}
               projectStatus={project.status}
@@ -25,7 +25,7 @@ export default function Projects({ projects }) {
             <Project
               k={key}
               className={nonColoredProjectClassName}
-              projectLink={project.link}
+              projectSlug={project.slug}
               projectName={project.name}
               projectDescription={project.description}
               projectStatus={project.status}
