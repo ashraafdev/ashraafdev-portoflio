@@ -12,7 +12,7 @@ function WebsiteLink({ link }) {
                 alt="metamask"
                 class="h-6 w-6"
                 />
-                Visit Trial
+                Visit
             </a>
         </>
     )
@@ -32,7 +32,7 @@ function GitHubCode({ link }) {
           alt="metamask"
           class="h-6 w-6"
         />
-        View Code
+        Code
       </a>
     </>
   );

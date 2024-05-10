@@ -76,7 +76,7 @@ export default function Project() {
             <span className="font-bold">Description: </span>
             {projectData.description}
           </h2>
-          <div className="flex-1 flex gap-2">
+          <div className="flex-1 lg:flex grid grid-cols-2 gap-2">
             {projectData.websiteLink && (
               <WebsiteLink link={projectData.websiteLink} />
             )}
