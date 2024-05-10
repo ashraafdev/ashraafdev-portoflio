@@ -42,7 +42,10 @@ export default function Project() {
 
       listAll(listRef)
         .then((res) => {
-          getDownloadableLinks(res.items);
+          const sortedImages = res.items.sort((a, b) => 
+            a.name - b.name
+          )
+          getDownloadableLinks(sortedImages);
         })
         .catch((error) => {
           setError(error.message);
