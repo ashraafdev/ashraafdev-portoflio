@@ -43,11 +43,11 @@ export default function Home() {
       <Navbar />
       <Header />
       <div className="flex w-full">
-        <div className="flex-1 font-bold md:text-[22.5px] lg:text-[27.5px] xl:text-[35px]">
+        <div className="flex-1 font-bold text-[25px] lg:text-[27.5px] xl:text-[35px]">
           My Last Projects
         </div>
         <Link
-          className="flex-1 flex justify-end underline underline-offset-4 md:text-[20px] lg:text-[25px] xl:text-[30px]"
+          className="flex-1 flex justify-end underline underline-offset-4 text-[25px] lg:text-[25px] xl:text-[30px]"
           to="/projects"
         >
           View All
