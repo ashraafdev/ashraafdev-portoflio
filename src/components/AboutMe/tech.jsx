@@ -17,7 +17,7 @@ export default function UsedTech({ techs }) {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-3">
+      <div className="flex-1 flex flex-wrap justify-center gap-3">
         <div className="w-[45%] lg:flex-1">
           <input
             id="tech0"
@@ -57,14 +57,17 @@ export default function UsedTech({ techs }) {
             );
           })}
       </div>
-      <div className="flex flex-wrap gap-[5%] px-[20px] lg:px-[40px]">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-[5%] px-[20px] lg:px-[40px]">
         {tech &&
           tech.map((tech, key) => {
             return (
               <div
-                className={`w-[45%] lg:w-[30%] flex justify-center my-2 w-[${tech.width}px]`}
+                className={`lg:w-[30%] gap-1 justify-center my-2 w-[100px] lg:w-[${tech.width}px]`}
               >
-                <img width="200" src={tech.img} />
+                <img src={tech.img} />
+                <span className="text-[15px] lg:text-[20px] font-bold">
+                  {tech.name}
+                </span>
               </div>
             );
           })}
