@@ -32,7 +32,7 @@ export default function Blog() {
       <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif">
         <span className="text-[#9D8E8E]">My</span> Blog
       </div>
-      <div className="text-center font-semibold text-[40px] lg:text-[50px] xl:text-[60px] font-serif">
+      <div className="text-center font-semibold text-[25px] lg:text-[40px] xl:text-[50px] font-serif">
         Here where, <span className="text-[#9D8E8E]">I</span> write about what{" "}
         <span className="text-[#9D8E8E]">I</span> have learned{" "}
         <span className="text-[#9D8E8E]">recently</span>
