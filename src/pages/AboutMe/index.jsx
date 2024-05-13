@@ -31,9 +31,9 @@ export default function AboutMe() {
       <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif">
         About <span className="text-[#9D8E8E]">Me</span>
       </div>
-      <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 lg:flex-wrap md:px-10 lg:px-20">
+      <div className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-0 lg:flex-wrap md:px-10 lg:px-20">
         <div className="flex-1 flex flex-col gap-10 items-center">
-          <div className="flex-1 flex items-center text-[35px] lg:text-[40px] xl:text-[45px]">
+          <div className="flex-1 flex items-center text-[30px] lg:text-[40px] xl:text-[45px]">
             <div>
               <span className="text-[#9D8E8E]">I'm</span> a Full Stack
               web/mobile developer <span className="text-[#9D8E8E]">Who</span>{" "}

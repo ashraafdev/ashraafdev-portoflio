@@ -63,19 +63,19 @@ export default function Project() {
   };
 
   return (
-    <div className="h-full w-full flex flex-col gap-10 px-[25px] lg:px-[50px] py-[20px] text-[30px]">
+    <div className="flex-1 flex flex-col gap-10 px-[25px] lg:px-[50px] py-[20px] text-[30px]">
       <Navbar />
-      <div className="flex flex-col xl:flex-row mx-[5%] lg:gap-5 my-5">
+      <div className="flex flex-col xl:flex-row mx-[5%] gap-2 lg:gap-5 my-5">
         <div className="flex-1">
           <YoutubeVideo link={projectData.youtubeLink} />
         </div>
         <div className="flex-1 flex flex-col gap-5">
-          <h1 className="text-[50px] font-bold">{projectData.name}</h1>
-          <h2 className="text-[25px] ">
+          <h1 className="text-[30px] lg:text-[50px] font-bold">{projectData.name}</h1>
+          <h2 className="text-[15px] lg:text-[25px] ">
             <span className="font-bold">Used Tech: </span>
             {projectData.tech.join(", ")}
           </h2>
-          <h2 className="text-[25px] ">
+          <h2 className="text-[15px] lg:text-[25px]">
             <span className="font-bold">Description: </span>
             {projectData.description}
           </h2>
@@ -92,7 +92,7 @@ export default function Project() {
         </div>
       </div>
       <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif">
-        <span className="text-[#9D8E8E]">Screen</span>Shoots
+        <span className="text-[#9D8E8E]">Screen</span>shoots
       </div>
       <Carousel>
         {images.length > 0 ? (
