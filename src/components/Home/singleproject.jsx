@@ -12,10 +12,10 @@ export default function Project({
   return (
     <div key={k} className={className}>
       <div className="h-auto flex w-full">
-        <div className="flex-1 font-semibold">{projectName}</div>
+        <div className="flex-1 font-semibold text-[25px] lg:text-[30px] xl:text-[35px]">{projectName}</div>
         <div className="flex-1 flex justify-end">
           <Link
-            className="flex-1 flex justify-end underline underline-offset-4"
+            className="flex-1 flex justify-end underline underline-offset-4 text-[25px] lg:text-[30px] xl:text-[35px]"
             to={`/project/${projectSlug}`}
           >
             View
