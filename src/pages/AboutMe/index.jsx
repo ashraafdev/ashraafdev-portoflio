@@ -3,6 +3,7 @@ import UsedTech from "../../components/AboutMe/tech";
 import Navbar from "../../components/Home/navbar";
 import { useTechs } from "../../hooks/about";
 import { AppContext } from "../../App";
+import Footer from "../../components/Home/footer";
 
 export default function AboutMe() {
   const { database, techs, setTechs, setLoading, setError } = useContext(AppContext);
@@ -54,6 +55,7 @@ export default function AboutMe() {
         </div>
         <UsedTech techs={techs} />
       </div>
+      <Footer />
     </div>
   );
 }

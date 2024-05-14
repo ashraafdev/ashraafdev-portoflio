@@ -3,6 +3,7 @@ import { AppContext } from "../../App";
 import { useContext, useEffect } from "react";
 import ProjectComponent from "../../components/Home/projects";
 import { useProjects } from "../../hooks/projects";
+import Footer from "../../components/Home/footer";
 
 export default function Projects() {
   const {
@@ -43,6 +44,7 @@ export default function Projects() {
         <span className="text-[#9D8E8E]">My</span> Projects
       </div>
       <ProjectComponent projects={project} />
+      <Footer />
     </div>
   );
 }

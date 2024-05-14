@@ -3,6 +3,7 @@ import Navbar from "../../components/Home/navbar";
 import { AppContext } from "../../App";
 import { useContext, useEffect } from "react";
 import { useBlogs } from "../../hooks/blog";
+import Footer from "../../components/Home/footer";
 
 export default function Blog() {
   const { database, blog, setBlog, setLoading, setError } = useContext(AppContext);
@@ -38,6 +39,7 @@ export default function Blog() {
         <span className="text-[#9D8E8E]">recently</span>
       </div>
       <Blogs blog={blog} />
+      <Footer />
     </div>
   );
 }

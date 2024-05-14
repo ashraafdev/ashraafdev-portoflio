@@ -1,4 +1,5 @@
 import ContactForm from "../../components/ContactMe/form";
+import Footer from "../../components/Home/footer";
 import Navbar from "../../components/Home/navbar";
 
 export default function ContactMe() {
@@ -9,6 +10,7 @@ export default function ContactMe() {
         Contact <span className="text-[#9D8E8E]">Me</span> 
       </div>
       <ContactForm />
+      <Footer />
     </div>
   );
 }

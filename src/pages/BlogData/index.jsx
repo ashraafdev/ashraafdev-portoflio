@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../../components/Home/navbar";
 import { PublishedAt, PublishedBy } from "../../components/Blog/blogimages";
 import Editor from "../../components/Blog/editor";
+import Footer from "../../components/Home/footer";
 
 export default function BlogData() {
   const { blogSlug } = useParams();
@@ -42,6 +43,7 @@ export default function BlogData() {
       <div className="text-left mx-[20px] md:mx-[7.5%] lg:mx-[20%] font-semibold text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px] font-serif">
         <Editor blogContent={blog.blog} />
       </div>
+      <Footer />
     </div>
   );
 }

@@ -13,6 +13,7 @@ import { useSingleProject } from "../../hooks/projects";
 import { useParams } from "react-router-dom";
 import { AppContext } from "../../App";
 import { listAll, ref, getDownloadURL } from "firebase/storage";
+import Footer from "../../components/Home/footer";
 
 export default function Project() {
   const { database, storage, setLoading, setError } = useContext(AppContext);
@@ -109,6 +110,7 @@ export default function Project() {
           </div>
         )}
       </Carousel>
+      <Footer />
     </div>
   );
 }
