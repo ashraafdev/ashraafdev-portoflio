@@ -27,7 +27,7 @@ export default function BlogData() {
 
 
   return (
-    <div className="h-full w-full flex flex-col gap-10 px-[25px] lg:px-[50px] py-[20px] text-[30px]">
+    <div className="h-full w-full flex flex-col gap-10 px-[25px] lg:px-[50px] pt-[20px] text-[30px]">
       <Navbar />
       <div className="text-center font-semibold text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-serif">
         {blog.title}
