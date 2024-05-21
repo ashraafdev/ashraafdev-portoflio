@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import Navbar from "../../components/Home/navbar";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+//import { Carousel } from "react-responsive-carousel";
+//import "react-responsive-carousel/lib/styles/carousel.min.css";
 import YoutubeVideo from "../../components/Project/youtubevideo";
 import {
   FacebookShare,
@@ -14,6 +14,8 @@ import { useParams } from "react-router-dom";
 import { AppContext } from "../../App";
 import { listAll, ref, getDownloadURL } from "firebase/storage";
 import Footer from "../../components/Home/footer";
+
+import Carousel from "../../components/Project/carousel";
 
 export default function Project() {
   const { database, storage, setLoading, setError } = useContext(AppContext);
@@ -43,9 +45,7 @@ export default function Project() {
 
       listAll(listRef)
         .then((res) => {
-          const sortedImages = res.items.sort((a, b) => 
-            a.name - b.name
-          )
+          const sortedImages = res.items.sort((a, b) => a.name - b.name);
           getDownloadableLinks(sortedImages);
         })
         .catch((error) => {
@@ -71,7 +71,9 @@ export default function Project() {
           <YoutubeVideo link={projectData.youtubeLink} />
         </div>
         <div className="flex-1 flex flex-col gap-5">
-          <h1 className="text-[30px] lg:text-[50px] font-bold">{projectData.name}</h1>
+          <h1 className="text-[30px] lg:text-[50px] font-bold">
+            {projectData.name}
+          </h1>
           <h2 className="text-[15px] lg:text-[25px] ">
             <span className="font-bold">Used Tech: </span>
             {projectData.tech.join(", ")}
@@ -95,21 +97,17 @@ export default function Project() {
       <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif">
         <span className="text-[#9D8E8E]">Screen</span>shoots
       </div>
-      <Carousel>
-        {images.length > 0 ? (
-          images.map((image) => {
-            return (
-              <div>
-                <img src={`${image}`} />
-              </div>
-            );
-          })
-        ) : (
-          <div>
-            <img src="https://static.vecteezy.com/system/resources/previews/004/639/366/original/error-404-not-found-text-design-vector.jpg" />
-          </div>
-        )}
-      </Carousel>
+      {images.length ? (
+        <Carousel>
+          {images.map((link) => (
+            <img src={link} />
+          ))}
+        </Carousel>
+      ) : (
+        <div>
+          <img src="https://static.vecteezy.com/system/resources/previews/004/639/366/original/error-404-not-found-text-design-vector.jpg" />
+        </div>
+      )}
       <Footer />
     </div>
   );

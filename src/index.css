@@ -21,3 +21,10 @@
 }
 
 .st0{fill:none;}
+
+@media only screen and (max-width: 600px) {
+  .image-gallery-slide img {
+    width: 100%;
+    height: auto;
+  }
+}
