@@ -27,12 +27,12 @@ export default function AboutMe() {
   }, [error]);
 
   return (
-    <div className="h-full w-full flex flex-col gap-10 px-[25px] lg:px-[50px] pt-[20px] text-[30px]">
+    <div className="h-full w-full flex flex-col gap-10 pt-[20px] text-[30px]">
       <Navbar />
-      <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif">
+      <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif px-[25px] lg:px-[50px]">
         About <span className="text-[#9D8E8E]">Me</span>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-0 lg:flex-wrap md:px-10 lg:px-20">
+      <div className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-0 lg:flex-wrap md:px-10 lg:px-20 px-[25px] lg:px-[50px]">
         <div className="flex-1 flex flex-col gap-10 items-center">
           <div className="flex-1 flex items-center text-[30px] lg:text-[40px] xl:text-[45px]">
             <div>
@@ -49,7 +49,7 @@ export default function AboutMe() {
           <img className="rounded-full shadow-md shadow-gray-500/50" width={500} src="me.jpeg" />
         </div>
       </div>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 px-[25px] lg:px-[50px]">
         <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif">
           Used <span className="text-[#9D8E8E]">Tech</span>
         </div>

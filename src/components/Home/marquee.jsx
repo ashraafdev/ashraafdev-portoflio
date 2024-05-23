@@ -41,7 +41,7 @@ const Marquee = () => {
   );
 
   return (
-    <div className="h-[200px] w-full overflow-x-hidden">
+    <div className="h-[200px] w-full overflow-x-hidden overflow-y-hidden">
       <div className="relative flex items-center h-full">
         <a
           ref={marqueeRef}

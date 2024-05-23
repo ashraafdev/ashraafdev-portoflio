@@ -64,9 +64,9 @@ export default function Project() {
   };
 
   return (
-    <div className="flex-1 flex flex-col gap-10 px-[25px] lg:px-[50px] pt-[20px] text-[30px]">
+    <div className="flex-1 flex flex-col gap-10 pt-[20px] text-[30px]">
       <Navbar />
-      <div className="flex flex-col xl:flex-row mx-[5%] gap-2 lg:gap-5 my-5">
+      <div className="flex flex-col xl:flex-row mx-[5%] gap-2 lg:gap-5 my-5 px-[25px] lg:px-[50px]">
         <div className="flex-1">
           <YoutubeVideo link={projectData.youtubeLink} />
         </div>
@@ -94,7 +94,7 @@ export default function Project() {
           </div>
         </div>
       </div>
-      <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif">
+      <div className="text-center font-semibold text-[50px] lg:text-[70px] xl:text-[85px] font-serif px-[25px] lg:px-[50px]">
         <span className="text-[#9D8E8E]">Screen</span>shoots
       </div>
       {images.length ? (
