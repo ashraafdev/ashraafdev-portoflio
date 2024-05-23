@@ -1,19 +1,33 @@
 import { Link } from "react-router-dom";
 import ContactMe from "../Common/contactme";
 import { AppContext } from "../../App";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export default function Navbar() {
   const { setShowDropDown } = useContext(AppContext);
 
+  const logoRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.to(logoRef.current, {
+      scale: 1.3,
+      duration: 1,
+      yoyo: true,
+      repeat: -1,
+      ease: "power1.inOut",
+    });
+  }, []);
+
   return (
     <>
       <div className="flex w-full flex-wrap">
-        <div className="flex-1 w-full justify-center lg:justify-normal flex gap-8">
-          <div className="h-[70px] w-[70px] rounded-full bg-profile bg-center bg-cover shadow-lg shadow-amber-500/50"></div>
-          <div className="flex lg:text-[20px] items-center lg:text-[25px] xl:text-[30px]">
-            AshraafDev
-          </div>
+        <div className="flex-1 w-full justify-between lg:justify-normal flex gap-8">
+          <div
+            ref={logoRef}
+            className="h-[100px] w-[100px] bg-logo-white dark:bg-logo-dark bg-[length:100px_100px] shadow-amber-500/50"
+          ></div>
           <button
             onClick={() => setShowDropDown(true)}
             className="lg:hidden flex items-center"
