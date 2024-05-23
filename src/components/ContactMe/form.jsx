@@ -39,7 +39,7 @@ export default function ContactForm() {
   }, [error]);
 
   return (
-    <form onSubmit={sendMessage} className="flex flex-col gap-5 w-full h-full">
+    <form onSubmit={sendMessage} className="flex flex-col gap-5 w-full h-full px-[25px] lg:px-[50px]">
       <input
         ref={guestName}
         placeholder="Your Name"
