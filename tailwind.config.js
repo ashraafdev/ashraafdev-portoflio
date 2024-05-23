@@ -6,6 +6,8 @@ export default {
     extend: {
       backgroundImage: {
         profile: "url('/public/profile.jpg')",
+        "logo-white": "url('/public/ashraafdev-black.png')",
+        "logo-dark": "url('/public/ashraafdev-white.png')",
       },
     },
   },

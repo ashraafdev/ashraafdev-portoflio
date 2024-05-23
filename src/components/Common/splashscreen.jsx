@@ -1,6 +1,6 @@
-import anime from "animejs/lib/anime.es.js";
+//import anime from "animejs/lib/anime.es.js";
 import { useContext, useEffect, useState } from "react";
-import "animate.css";
+//import "animate.css";
 import { AppContext } from "../../App";
 
 export default function SplashScreen() {
@@ -11,7 +11,7 @@ export default function SplashScreen() {
     setTimeout(() => {
       setLoadFinished(true);
 
-      anime({
+      /*anime({
         targets: "#topBox",
         top: ["-50%", "-100%"],
         duration: 2500,
@@ -25,7 +25,7 @@ export default function SplashScreen() {
         duration: 2500,
         delay: 250,
         easing: 'linear'
-      });
+      });*/
     }, 3000);
   }, []);
 
