@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex w-full flex-wrap">
+      <div className="flex w-full flex-wrap px-[25px] lg:px-[50px]">
         <div className="flex-1 w-full justify-between lg:justify-normal flex gap-8">
           <div
             ref={logoRef}
